@@ -1,0 +1,18 @@
+
+
+
+function signUpUniversity () {
+    const [university, setUniversity] = useState("");
+    const [study, setStudy] = useState("");
+
+    const renderButton = () => {
+        return <Button onPress={() => handleSubmit()} title="Create University"/>;
+    }
+
+
+
+
+
+
+    
+}
