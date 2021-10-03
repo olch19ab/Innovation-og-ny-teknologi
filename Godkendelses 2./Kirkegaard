@@ -1,0 +1,55 @@
+
+
+
+function signUpUniversity () {
+    const [university, setUniversity] = useState("");
+    const [study, setStudy] = useState("");
+
+    const renderButton = () => {
+        return <Button onPress={() => handleSubmit()} title="Create University"/>;
+    }
+}
+
+ const items = []// hent data fra db her
+
+<View>
+           {items.map((uni) => {
+               <>
+               <Text>{uni.School}</Text>
+               <Text>{uni.Location}</Text>
+               <Text>{uni.Education}</Text>
+               </>
+           })}
+       </View>
+
+
+
+
+           const [university, setUniversity] = useState();
+
+    useEffect(() => {
+        if(!university) {
+            firebase
+                .database()
+                .ref('/University')
+                .on('value', snapshot => {
+                        setCars(snapshot.val())
+                });
+                
+        }
+    },[]);
+
+
+    <FlatList
+            data={universityArray}
+            keyExtractor={(item, index) => Keys[index]}
+            renderItem={({ item, index }) => {
+                return(
+                    
+                        <Text>
+                            {item.Education} {item.Location} {item.School}
+                        </Text>
+              
+                )
+            }}
+        />
