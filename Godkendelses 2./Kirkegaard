@@ -53,3 +53,26 @@ function signUpUniversity () {
                 )
             }}
         />
+
+
+
+
+
+
+
+        // var state = {items: ""}
+    //const data = firebase.database().ref(`University`);
+    //const unniversity = data.on('value', (University) => {
+       
+        
+
+        console.log(University.val());
+       // console.log(University.val().School);
+        //let uniItem = University.val();
+        //let items = Object.values(uniItem);
+       // state =({ items: items });
+        
+    },
+    (errorObject) => {
+        console.log('The read failed: ' + errorObject.name);
+      });
